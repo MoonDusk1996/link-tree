@@ -32,7 +32,7 @@ export default async function handler(
         },
         {
           "title": "Detalhes brutos:",
-          "description": "JSON.stringify(req.headers, null, 10),",
+          "description": JSON.stringify(req.headers, null, 10),
           "color": 16763904
         }
       ],
