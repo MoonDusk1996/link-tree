@@ -6,6 +6,16 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+import {
+  Discord,
+  Instagram,
+  Steam,
+  Gmail,
+  GitHub,
+  ArtStation,
+  Linkedin,
+} from "./CustomSvg";
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -74,7 +84,8 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
           href="https://www.instagram.com/__moondusk/"
-          >
+          startIcon={<Instagram />}
+        >
           Instagram
         </Button>
         <Button
@@ -82,7 +93,8 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
           href="https://discord.gg/AGfxJKmbKf"
-          >
+          startIcon={<Discord />}
+        >
           Discord
         </Button>
         <Button
@@ -90,8 +102,18 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
           href="https://steamcommunity.com/id/TheDuskHue/"
-          >
+          startIcon={<Steam />}
+        >
           Steam
+        </Button>
+        <Button
+          fullWidth
+          sx={{ height: "60px", marginBottom: "20px" }}
+          variant="outlined"
+          href="https://steamcommunity.com/id/TheDuskHue/"
+          startIcon={<Gmail />}
+        >
+          Email
         </Button>
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -99,7 +121,8 @@ export default function BasicTabs() {
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-        href="https://github.com/MoonDusk1996"
+          href="https://github.com/MoonDusk1996"
+          startIcon={<GitHub />}
         >
           Github
         </Button>
@@ -108,7 +131,8 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
           href="https://www.artstation.com/duski"
-          >
+          startIcon={<ArtStation />}
+        >
           ArtStation
         </Button>
         <Button
@@ -116,7 +140,8 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
-          >
+          startIcon={<Linkedin />}
+        >
           Linkedin
         </Button>
       </TabPanel>
