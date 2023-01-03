@@ -14,12 +14,14 @@ export default async function handler(
       embeds: [
         {
           title: 'Novo acesso no "My link tree"',
-          description: "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
+          description:
+            "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
           color: "32896",
+          url: `https://www.google.com/maps/place/`,
         },
       ],
     });
-    res.status(200).json({ status: 200 });
+    res.status(200).json({ data: req.headers });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
