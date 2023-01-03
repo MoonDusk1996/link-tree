@@ -21,7 +21,8 @@ export default async function handler(
         },
       ],
     });
-    res.status(200).json({ data: req.headers });
+    res.status(200).json({ data: req.headers.x-vercel-ip-latitude
+    });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
