@@ -1,13 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AppThemeProvider } from "../contexts/themecontext";
-import User from "../services/User";
+import UserProvider from "../services/UserContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <AppThemeProvider>
-      <User />
-      <Component {...pageProps} />
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
     </AppThemeProvider>
   );
 }
