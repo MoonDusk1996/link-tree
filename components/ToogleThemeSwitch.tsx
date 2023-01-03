@@ -53,9 +53,6 @@ export default function CustomizedSwitches() {
   const { toggleTheme, themeName } = useAppThemeContext();
   const [darkmode, setDarkmode] = useState(false);
 
-  useEffect(() => {
-    themeName === "light" ? setDarkmode(false) : setDarkmode(true);
-  });
 
   return (
     <FormGroup>
