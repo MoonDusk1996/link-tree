@@ -14,7 +14,7 @@ import {
   GitHub,
   ArtStation,
   Linkedin,
-} from "./CustomSvg";
+} from "./CustomSvgs";
 
 interface TabPanelProps {
   children?: React.ReactNode;
