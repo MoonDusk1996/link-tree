@@ -14,8 +14,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const link = `https://www.google.com/maps/place/${req.headers.xVercelIpLatitude}`
-    console.log(link)
+    const data = req.headers['x-vercel-ip-longitude']
+
     const webhook = await webhookClient.send({
       embeds: [
         {
@@ -26,7 +26,7 @@ export default async function handler(
         },
       ],
     });
-    res.status(200).json({ data:link  });
+    res.status(200).json({ data: data });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
