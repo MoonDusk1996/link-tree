@@ -110,7 +110,7 @@ export default function BasicTabs() {
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-          href="https://steamcommunity.com/id/TheDuskHue/"
+          href="mailto:washington.lopesdasilvafilho@gmail.com"
           startIcon={<Gmail />}
         >
           Email
