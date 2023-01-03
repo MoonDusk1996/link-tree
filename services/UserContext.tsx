@@ -8,8 +8,6 @@ function UserProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     fetch("/api/userdata")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
   });
 
   return (

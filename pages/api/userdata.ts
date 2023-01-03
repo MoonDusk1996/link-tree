@@ -13,13 +13,13 @@ export default async function handler(
     const webhook = await webhookClient.send({
       embeds: [
         {
-          title: "Acesso no My link tree",
-          description: req.headers.host,
+          title: 'Novo acesso no "My link tree"',
+          description: "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
           color: "32896",
         },
       ],
     });
-    res.status(200).json({ headers: req.headers });
+    res.status(200).json({ status: 200 });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
