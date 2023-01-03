@@ -9,16 +9,16 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log(req.headers.host);
-  if (req.headers.host === "my-link-tree-moondusk1996.vercel.app") {
-    const webhook = await webhookClient.send({
-      embeds: [
-        {
-          title: "Acesso no My link tree",
-          description: `Um novo acesso foi feito pelo link do Instagram`,
-          color: "32896",
-        },
-      ],
-    });
-  }
+  try {
+    // const webhook = await webhookClient.send({
+    //   embeds: [
+    //     {
+    //       title: "Acesso no My link tree",
+    //       description: `Um novo acesso foi feito`,
+    //       color: "32896",
+    //     },
+    //   ],
+    // });
+    res.status(200).json({body:req.headers});
+  } catch (error) {}
 }
