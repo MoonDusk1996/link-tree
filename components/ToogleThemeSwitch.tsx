@@ -57,7 +57,7 @@ export default function CustomizedSwitches() {
   return (
     <FormGroup>
       <FormControlLabel
-        label="Theme"
+        label=""
         sx={{ marginLeft: "15px" }}
         control={<MaterialUISwitch onClick={() => toggleTheme()} />}
       />
