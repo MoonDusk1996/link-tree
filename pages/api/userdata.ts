@@ -18,15 +18,25 @@ export default async function handler(
     const longitude = req.headers['x-vercel-ip-longitude']
 
     const webhook = await webhookClient.send({
-      embeds: [
+      "content": null,
+      "embeds": [
         {
-          title: 'Novo acesso no "My link tree"',
-          description:
-            "Detalhes do Acesso:\n\r" + JSON.stringify(req.headers, null, 10),
-          color: "32896",
-          url:`https://www.google.com/maps/place/${latitude},${longitude}`
+          "title": "Novo acesso no \"My link tree\"!",
+          "color": 3407616
         },
+        {
+          "title": "Detalhes de localização:",
+          "description": `Latitude:${req.headers['x-vercel-ip-latitude']}\nLongitude:${req.headers['x-vercel-ip-longitude']}\nPaís:${req.headers['x-vercel-ip-country']}\nRegião:${req.headers['x-vercel-ip-country-region']}\nTime zone:${req.headers['x-vercel-ip-timezone']}\nLocalização aproximada: https://www.google.com/maps/place/${req.headers['x-vercel-ip-latitude']},${req.headers['x-vercel-ip-longitude']}`,
+          "url": "https://www.google.com/maps/place/${latitude},${longitude}",
+          "color": 34303
+        },
+        {
+          "title": "Detalhes brutos:",
+          "description": "JSON.stringify(req.headers, null, 10),",
+          "color": 16763904
+        }
       ],
+      "attachments": []
     });
     res.status(200).json({ status: 200 });
   } catch (error) {
