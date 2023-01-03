@@ -63,7 +63,7 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs"
         >
-          <Tab label="Contato" {...a11yProps(0)} />
+          <Tab label="Redes" {...a11yProps(0)} />
           <Tab label="Portfólio" {...a11yProps(1)} />
         </Tabs>
       </Box>
@@ -73,21 +73,24 @@ export default function BasicTabs() {
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-        >
+          href="https://www.instagram.com/__moondusk/"
+          >
           Instagram
         </Button>
         <Button
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-        >
+          href="https://discord.gg/AGfxJKmbKf"
+          >
           Discord
         </Button>
         <Button
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-        >
+          href="https://steamcommunity.com/id/TheDuskHue/"
+          >
           Steam
         </Button>
       </TabPanel>
@@ -96,6 +99,7 @@ export default function BasicTabs() {
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
+        href="https://github.com/MoonDusk1996"
         >
           Github
         </Button>
@@ -103,14 +107,16 @@ export default function BasicTabs() {
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-        >
+          href="https://www.artstation.com/duski"
+          >
           ArtStation
         </Button>
         <Button
           fullWidth
           sx={{ height: "60px", marginBottom: "20px" }}
           variant="outlined"
-        >
+          href="https://www.linkedin.com/in/washington-lopes-638836249/"
+          >
           Linkedin
         </Button>
       </TabPanel>
