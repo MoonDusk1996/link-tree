@@ -10,17 +10,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const host = req.headers.host
-    console.log(host)
     const webhook = await webhookClient.send({
       embeds: [
         {
           title: "Acesso no My link tree",
-          description: host,
+          description: req.headers.host,
           color: "32896",
         },
       ],
     });
-    res.status(200).json({headers:req.headers});
-  } catch (error) {}
+    res.status(200).json({ headers: req.headers });
+  } catch (error) {
+    res.status(503).json({ status: 503 });
+  }
 }
