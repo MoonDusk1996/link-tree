@@ -50,7 +50,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 export default function CustomizedSwitches() {
   const { toggleTheme, themeName } = useAppThemeContext();
-  console.log(themeName)
 
   return (
     <FormGroup>

@@ -34,7 +34,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -57,10 +57,10 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box>
       <Box
         sx={{
-          borderBottom: 1,
+          borderBottom: 2,
           borderColor: "divider",
           borderRadius: "3px",
           bgcolor: "background.paper",
@@ -81,7 +81,7 @@ export default function BasicTabs() {
       <TabPanel value={value} index={0}>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.instagram.com/__moondusk/"
           startIcon={<Instagram />}
@@ -90,7 +90,7 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://discord.gg/AGfxJKmbKf"
           startIcon={<Discord />}
@@ -99,7 +99,7 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://steamcommunity.com/id/TheDuskHue/"
           startIcon={<Steam />}
@@ -108,7 +108,7 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="mailto:washington.lopesdasilvafilho@gmail.com"
           startIcon={<Gmail />}
@@ -119,7 +119,7 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1}>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://github.com/MoonDusk1996"
           startIcon={<GitHub />}
@@ -128,7 +128,7 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.artstation.com/duski"
           startIcon={<ArtStation />}
@@ -137,7 +137,7 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginBottom: "20px" }}
+          sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
           startIcon={<Linkedin />}

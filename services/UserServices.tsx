@@ -11,6 +11,7 @@ export function UserData() {
   useEffect(() => {
     const timeOnOpen = new Date().getTime();
     window.addEventListener("beforeunload", function (e) {
+      e.preventDefault();
       const timeOnClose = new Date().getTime();
       const totalTime = timeOnClose - timeOnOpen;
       fetch("./api/userdata", {
