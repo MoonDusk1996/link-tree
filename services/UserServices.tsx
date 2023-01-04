@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { setCookie, parseCookies } from "nookies";
 
 export function WelcomeConsole() {
   console.log(
