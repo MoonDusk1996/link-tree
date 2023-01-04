@@ -84,8 +84,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.instagram.com/__moondusk/"
+          target={"_blank"}
           startIcon={<Instagram />}
-        >
+          >
           Instagram
         </Button>
         <Button
@@ -93,8 +94,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://discord.gg/AGfxJKmbKf"
+          target={"_blank"}
           startIcon={<Discord />}
-        >
+          >
           Discord
         </Button>
         <Button
@@ -102,8 +104,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://steamcommunity.com/id/TheDuskHue/"
+          target={"_blank"}
           startIcon={<Steam />}
-        >
+          >
           Steam
         </Button>
         <Button
@@ -111,8 +114,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="mailto:washington.lopesdasilvafilho@gmail.com"
+          target={"_blank"}
           startIcon={<Gmail />}
-        >
+          >
           Email
         </Button>
       </TabPanel>
@@ -122,8 +126,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://github.com/MoonDusk1996"
+          target={"_blank"}
           startIcon={<GitHub />}
-        >
+          >
           Github
         </Button>
         <Button
@@ -131,8 +136,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.artstation.com/duski"
+          target={"_blank"}
           startIcon={<ArtStation />}
-        >
+          >
           ArtStation
         </Button>
         <Button
@@ -140,8 +146,9 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
+          target={"_blank"}
           startIcon={<Linkedin />}
-        >
+          >
           Linkedin
         </Button>
       </TabPanel>
