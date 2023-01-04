@@ -1,7 +1,7 @@
 import ToogleThemeSwitch from "../components/ToogleThemeSwitch";
 import styles from "../styles/Home.module.css";
 import Avatar from "@mui/material/Avatar";
-import BasicTabs from "../components/Tabs";
+import BasicTabs from "../elements/Tabs";
 
 function App() {
   return (
