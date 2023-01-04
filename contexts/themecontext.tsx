@@ -1,18 +1,21 @@
 import React, {
   useState,
+  useEffect,
   createContext,
   useCallback,
   useMemo,
   useContext,
 } from "react";
-import {darkTheme} from "../themes/Dark";
-import {lightTheme} from "../themes/Light";
+import { darkTheme } from "../themes/Dark";
+import { lightTheme } from "../themes/Light";
 
 import { ThemeProvider } from "@mui/material";
 import { Box } from "@mui/material";
 
+import { setCookie, parseCookies } from "nookies";
+
 interface iThemeContextData {
-  themeName: string;
+  themeName: string | undefined;
   toggleTheme: () => void;
 }
 
@@ -25,9 +28,10 @@ export const useAppThemeContext = () => {
 export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  let currentTheme = "light";
-
-  const [themeName, setthemename] = useState<string>(currentTheme);
+  const [themeName, setthemename] = useState<string>();
+  useEffect(() => {
+    setthemename(parseCookies().user_theme);
+  });
 
   const toggleTheme = useCallback(() => {
     setthemename((oldThemeName) =>
@@ -36,11 +40,20 @@ export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   }, []);
 
   const theme = useMemo(() => {
-    if (themeName == "light") {
-      return lightTheme;
-    } else {
+    if (themeName == "dark") {
+      setCookie(null, "user_theme", "dark", {
+        maxAge: 86400 * 365,
+        path: "/",
+      });
       return darkTheme;
+    } else if (themeName == "light") {
+      setCookie(null, "user_theme", "light", {
+        maxAge: 86400 * 365,
+        path: "/",
+      });
+      return lightTheme;
     }
+    return lightTheme;
   }, [themeName]);
 
   return (

@@ -1,13 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AppThemeProvider } from "../contexts/themecontext";
-import useFetch from "../hooks/useFetch";
+import { UserData, WelcomeConsole } from "../services/UserServices";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const data = useFetch()
+  WelcomeConsole()
+  UserData()
   return (
     <AppThemeProvider>
-        <Component {...pageProps} />
+      <Component {...pageProps} />
     </AppThemeProvider>
   );
 }

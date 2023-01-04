@@ -14,8 +14,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
- 
-
     const webhook = await webhookClient.send({
       "content": null,
       "embeds": [
@@ -30,7 +28,7 @@ export default async function handler(
         },
         {
           "title": "Detalhes técnicos:",
-          "description": `Acessado de: ${req.headers['x-requested-with']}\nIP público: ${req.headers['x-real-ip']}\n user-agent: ${req.headers['user-agent']}`,
+          "description": `Tempo online: ${req.body.totalTime / 1000} segundos\nAcessado de: ${req.headers['x-requested-with'] === undefined?"Desconhecido":req.headers['x-requested-with']}\nIP público: ${req.headers['x-real-ip']}\n user-agent: ${req.headers['user-agent']}`,
         },
         {
           "title": "Detalhes brutos:",
@@ -39,8 +37,9 @@ export default async function handler(
       ],
       "attachments": []
     });
-    res.status(200).json({ status: 200 });
+    res.status(200).json('');
   } catch (error) {
     res.status(503).json({ status: 503 });
   }
 }
+
