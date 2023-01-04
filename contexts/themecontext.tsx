@@ -35,7 +35,7 @@ export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const toggleTheme = useCallback(() => {
     setthemename((oldThemeName) =>
-      oldThemeName === "light" ? "dark" : "light"
+      oldThemeName === "light" || oldThemeName == undefined ? "dark" : "light"
     );
   }, []);
 
