@@ -94,7 +94,6 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://www.instagram.com/__moondusk/"
-          target={"_blank"}
           startIcon={<Instagram />}
           onClick={handleButton}
         >
@@ -105,7 +104,6 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://discord.gg/AGfxJKmbKf"
-          target={"_blank"}
           startIcon={<Discord />}
           onClick={handleButton}
         >
@@ -116,7 +114,6 @@ export default function BasicTabs() {
           sx={{ height: "60px", marginTop: "20px" }}
           variant="outlined"
           href="https://steamcommunity.com/id/TheDuskHue/"
-          target={"_blank"}
           startIcon={<Steam />}
           onClick={handleButton}
         >
