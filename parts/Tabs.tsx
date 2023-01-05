@@ -1,10 +1,12 @@
-import * as React from "react";
+
+import {useState, useEffect} from 'react';
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+
 
 import {
   Discord,
@@ -50,11 +52,19 @@ function a11yProps(index: number) {
 }
 
 export default function BasicTabs() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [visitedLinks, setVisitedLinks] = useState<any>([]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+
+  function handleButton(e: any) {
+    setVisitedLinks((prev:[]) => [...prev, e.nativeEvent.srcElement.href]);
+  }
+  useEffect(() => {
+    localStorage.setItem("VL", JSON.stringify(visitedLinks));
+  }, [visitedLinks]);
 
   return (
     <Box>
@@ -86,7 +96,8 @@ export default function BasicTabs() {
           href="https://www.instagram.com/__moondusk/"
           target={"_blank"}
           startIcon={<Instagram />}
-          >
+          onClick={handleButton}
+        >
           Instagram
         </Button>
         <Button
@@ -96,7 +107,8 @@ export default function BasicTabs() {
           href="https://discord.gg/AGfxJKmbKf"
           target={"_blank"}
           startIcon={<Discord />}
-          >
+          onClick={handleButton}
+        >
           Discord
         </Button>
         <Button
@@ -106,7 +118,8 @@ export default function BasicTabs() {
           href="https://steamcommunity.com/id/TheDuskHue/"
           target={"_blank"}
           startIcon={<Steam />}
-          >
+          onClick={handleButton}
+        >
           Steam
         </Button>
         <Button
@@ -116,7 +129,8 @@ export default function BasicTabs() {
           href="mailto:washington.lopesdasilvafilho@gmail.com"
           target={"_blank"}
           startIcon={<Gmail />}
-          >
+          onClick={handleButton}
+        >
           Email
         </Button>
       </TabPanel>
@@ -128,7 +142,8 @@ export default function BasicTabs() {
           href="https://github.com/MoonDusk1996"
           target={"_blank"}
           startIcon={<GitHub />}
-          >
+          onClick={handleButton}
+        >
           Github
         </Button>
         <Button
@@ -138,7 +153,8 @@ export default function BasicTabs() {
           href="https://www.artstation.com/duski"
           target={"_blank"}
           startIcon={<ArtStation />}
-          >
+          onClick={handleButton}
+        >
           ArtStation
         </Button>
         <Button
@@ -148,7 +164,8 @@ export default function BasicTabs() {
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
           target={"_blank"}
           startIcon={<Linkedin />}
-          >
+          onClick={handleButton}
+        >
           Linkedin
         </Button>
       </TabPanel>

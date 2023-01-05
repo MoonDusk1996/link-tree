@@ -42,13 +42,11 @@ export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   const theme = useMemo(() => {
     if (themeName == "dark") {
       setCookie(null, "user_theme", "dark", {
-        maxAge: 86400 * 365,
         path: "/",
       });
       return darkTheme;
     } else if (themeName == "light") {
       setCookie(null, "user_theme", "light", {
-        maxAge: 86400 * 365,
         path: "/",
       });
       return lightTheme;

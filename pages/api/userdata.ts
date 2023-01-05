@@ -14,6 +14,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
+    const VL = req.body.visited_links
+    const visitedLinks = VL.replace(',', '\n')
     const webhook = await webhookClient.send({
       "content": null,
       "embeds": [
@@ -28,12 +30,8 @@ export default async function handler(
         },
         {
           "title": "Detalhes técnicos:",
-          "description": `Tempo online: ${req.body.totalTime / 1000} segundos\nAcessado de: ${req.headers['x-requested-with'] === undefined?"Desconhecido":req.headers['x-requested-with']}\nIP público: ${req.headers['x-real-ip']}\n user-agent: ${req.headers['user-agent']}`,
+          "description": `Tempo online: ${req.body.total_time / 1000} segundos\nTema da página: ${req.body.theme_name}\n Links visitados: ${visitedLinks}\nTamanho da tela: ${req.body.screen_size}\nAcessado de: ${req.headers['x-requested-with'] === undefined?"Desconhecido":req.headers['x-requested-with']}\nIP público: ${req.headers['x-real-ip']}\n user-agent: ${req.headers['user-agent']}`,
         },
-        {
-          "title": "Detalhes brutos:",
-          "description": JSON.stringify(req.headers, null, 10),
-        }
       ],
       "attachments": []
     });
