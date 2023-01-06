@@ -9,8 +9,18 @@
   flex-direction: column;
   align-items: center;
 }
-.avatar img{
+.avatar img {
   border-radius: 100;
+}
+.badges {
+  display: flex;
+  flex-direction: row;
+}
+.options {
+  position: absolute;
+  display: block;
+  top: 29px;
+  left: 250px;
 }
 .description {
   display: flex;

@@ -40,12 +40,25 @@ type ProfileDataTypes = {
 
 export default function Profile() {
   const [profileData, setProfileData] = useState<ProfileDataTypes>();
+  const [repos, setrepos] = useState();
+
   useEffect(() => {
-    fetch("https://api.github.com/users/moondusk1996")
+    fetch("https://api.github.com/users/MoonDusk1996")
       .then((res) => res.json())
       .then((data) => {
         setProfileData(data);
-        console.log(data);
+      });
+  }, []);
+  useEffect(() => {
+    fetch("https://api.github.com/users/MoonDusk1996/repos")
+      .then((res) => res.json())
+      .then((data) => {
+        let test = data.map((stars) => stars.stargazers_count);
+        const sumWithInitial = test.reduce(
+          (accumulator, currentValue) => accumulator + currentValue,
+          0
+        );
+        console.log(sumWithInitial);
       });
   }, []);
 
@@ -77,6 +90,7 @@ export default function Profile() {
         ) : (
           <Skeleton variant="text" width={200} />
         )}
+        
       </div>
       <div className={styles.location}>
         {profileData?.location ? (
@@ -84,6 +98,14 @@ export default function Profile() {
         ) : (
           <Skeleton variant="text" width={200} />
         )}
+      </div>
+      <div className={styles.badges}>
+      <img
+        height={"20px"}
+          className="GS"
+          alt="GitHub User's stars"
+          src="https://img.shields.io/github/stars/moondusk1996?label=Stars&style=social"
+        ></img>
       </div>
     </>
   );

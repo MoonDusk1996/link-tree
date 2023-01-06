@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={styles.App}>
       <header className={styles.headerContainer}>
-        <Profile/>
+        <Profile />
       </header>
       <div className={styles.options}>
         <ToogleThemeSwitch />
