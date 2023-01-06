@@ -9,6 +9,9 @@
   flex-direction: column;
   align-items: center;
 }
+.avatar img{
+  border-radius: 100;
+}
 .description {
   display: flex;
   flex-direction: row;

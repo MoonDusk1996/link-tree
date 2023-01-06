@@ -8,7 +8,6 @@ export function WelcomeConsole() {
 }
 export function UserData() {
   useEffect(() => {
-    
     const largura =
       window.innerWidth ||
       document.documentElement.clientWidth ||
@@ -36,5 +35,6 @@ export function UserData() {
       });
       return undefined;
     });
-  });
+  },[]);
 }
+

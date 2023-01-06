@@ -4,8 +4,9 @@ import { AppThemeProvider } from "../contexts/themecontext";
 import { UserData, WelcomeConsole } from "../services/UserServices";
 
 export default function App({ Component, pageProps }: AppProps) {
-  WelcomeConsole()
-  UserData()
+  WelcomeConsole();
+  UserData();
+
   return (
     <AppThemeProvider>
       <Component {...pageProps} />
