@@ -53,7 +53,6 @@ export default function Profile() {
     fetch("https://api.github.com/users/MoonDusk1996/repos")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         let test = data.map((stars: { stargazers_count: number }) => {
           stars.stargazers_count;
         });
@@ -63,7 +62,6 @@ export default function Profile() {
             accumulator + currentValue,
           0
         );
-        console.log(sumWithInitial);
       });
   }, []);
 
