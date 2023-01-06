@@ -3,7 +3,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
+
 .headerContainer {
   display: flex;
   flex-direction: column;
@@ -17,15 +19,11 @@
   flex-direction: row;
 }
 .options {
-  position: absolute;
-  display: block;
-  top: 29px;
-  left: 250px;
+  position: relative;
+  top: -200px;
+  left: 100px;
 }
-.description {
-  display: flex;
-  flex-direction: row;
-}
+
 .linksContainer {
   width: 95%;
 }
@@ -38,6 +36,11 @@
 }
 
 @media screen and (min-width: 750px) {
+  .options {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
   .App {
     margin: 0 auto;
   }
@@ -53,5 +56,13 @@
   }
   .headerContainer > div {
     margin: 5px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .options {
+    position: static;
+    top: 0;
+    left: 0px;
   }
 }

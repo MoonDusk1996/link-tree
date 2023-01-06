@@ -53,9 +53,14 @@ export default function Profile() {
     fetch("https://api.github.com/users/MoonDusk1996/repos")
       .then((res) => res.json())
       .then((data) => {
-        let test = data.map((stars) => stars.stargazers_count);
+        console.log(data);
+        let test = data.map((stars: { stargazers_count: number }) => {
+          stars.stargazers_count;
+        });
+
         const sumWithInitial = test.reduce(
-          (accumulator, currentValue) => accumulator + currentValue,
+          (accumulator: number, currentValue: number) =>
+            accumulator + currentValue,
           0
         );
         console.log(sumWithInitial);
@@ -84,13 +89,12 @@ export default function Profile() {
           <Skeleton variant="text" width={200} />
         )}
       </div>
-      <div className={styles.descriptrion}>
+      <div className={styles.bio}>
         {profileData?.bio ? (
           profileData.bio
         ) : (
           <Skeleton variant="text" width={200} />
         )}
-        
       </div>
       <div className={styles.location}>
         {profileData?.location ? (
@@ -100,8 +104,8 @@ export default function Profile() {
         )}
       </div>
       <div className={styles.badges}>
-      <img
-        height={"20px"}
+        <img
+          height={"20px"}
           className="GS"
           alt="GitHub User's stars"
           src="https://img.shields.io/github/stars/moondusk1996?label=Stars&style=social"
