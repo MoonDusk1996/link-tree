@@ -19,9 +19,9 @@
   flex-direction: row;
 }
 .options {
-  position: relative;
-  top: -200px;
-  left: 100px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
 }
 
 .linksContainer {

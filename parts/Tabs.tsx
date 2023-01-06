@@ -83,8 +83,8 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs"
         >
-          <Tab label="Redes" {...a11yProps(0)} />
-          <Tab label="Portfólio" {...a11yProps(1)} />
+          <Tab label="Social" {...a11yProps(0)} />
+          <Tab label="Portfolio " {...a11yProps(1)} />
         </Tabs>
       </Box>
 
