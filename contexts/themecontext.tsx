@@ -61,7 +61,7 @@ export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({
           width="100vw"
           height="100vh"
           bgcolor={theme.palette.background.default}
-          color={theme.palette.primary.main}
+          color={theme.palette.primary.contrastText}
         >
           {children}
         </Box>

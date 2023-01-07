@@ -101,14 +101,7 @@ export default function Profile() {
           <Skeleton variant="text" width={200} />
         )}
       </div>
-      <div className={styles.badges}>
-        <img
-          height={"20px"}
-          className="GS"
-          alt="GitHub User's stars"
-          src="https://img.shields.io/github/stars/moondusk1996?label=Stars&style=social"
-        ></img>
-      </div>
+
     </>
   );
 }

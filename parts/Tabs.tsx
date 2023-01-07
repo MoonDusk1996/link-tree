@@ -1,12 +1,10 @@
-
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-
 
 import {
   Discord,
@@ -60,7 +58,7 @@ export default function BasicTabs() {
   };
 
   function handleButton(e: any) {
-    setVisitedLinks((prev:[]) => [...prev, e.nativeEvent.srcElement.href]);
+    setVisitedLinks((prev: []) => [...prev, e.nativeEvent.srcElement.href]);
   }
   useEffect(() => {
     localStorage.setItem("VL", JSON.stringify(visitedLinks));
@@ -91,7 +89,20 @@ export default function BasicTabs() {
       <TabPanel value={value} index={0}>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="https://www.instagram.com/moondusk1996/"
           target={"_blank"}
@@ -102,7 +113,20 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="https://discord.gg/AGfxJKmbKf"
           target={"_blank"}
@@ -113,7 +137,20 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="https://steamcommunity.com/id/TheDuskHue/"
           target={"_blank"}
@@ -124,7 +161,20 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="mailto:washington.lopesdasilvafilho@gmail.com"
           target={"_blank"}
@@ -137,7 +187,20 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1}>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="https://github.com/MoonDusk1996"
           target={"_blank"}
@@ -148,7 +211,20 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="https://www.artstation.com/duski"
           target={"_blank"}
@@ -159,7 +235,20 @@ export default function BasicTabs() {
         </Button>
         <Button
           fullWidth
-          sx={{ height: "60px", marginTop: "20px" }}
+          sx={{
+            height: "60px",
+            marginTop: "20px",
+            transition: "font-size 0.2s ease",
+
+            ":hover ": {
+              fontSize: "16px",
+              transition: "font-size, background  .1s ease",
+            },
+            ":active": {
+              position: "relative",
+              top: "2px",
+            },
+          }}
           variant="outlined"
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
           target={"_blank"}
