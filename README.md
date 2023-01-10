@@ -15,7 +15,7 @@ A link aggregator for social media and portfolio.
 **Server:** Next.js, Discord.js
 
 
-## Preview
+## 🔎Preview
 
 ### demo
 ![Demostração](https://raw.githubusercontent.com/MoonDusk1996/assets/main/my-link-tree/Demo.gif)
@@ -30,7 +30,7 @@ This project is under license MIT. See [LICENSE.md](https://choosealicense.com/l
 
 
 
-## FAQ
+## 🙋FAQ
 
 #### Why use the discordJS library?
 
@@ -51,7 +51,7 @@ Some are:
 Nothing more, they are only for the purpose of study and improvement of the project.
 
 
-## Referências
+## 📙References
  - [Next.js]( https://nextjs.org/)
  - [Material UI](https://mui.com/)
  - [Discord.js](https://discord.js.org/)
