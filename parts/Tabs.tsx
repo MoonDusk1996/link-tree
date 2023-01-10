@@ -4,17 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-
-import {
-  Discord,
-  Instagram,
-  Steam,
-  Gmail,
-  GitHub,
-  ArtStation,
-  Linkedin,
-} from "./CustonIcons";
+import CustomizedButtons from "../components/CustomizedButtons";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -59,6 +49,7 @@ export default function BasicTabs() {
 
   function handleButton(e: any) {
     setVisitedLinks((prev: []) => [...prev, e.nativeEvent.srcElement.href]);
+    console.log(visitedLinks);
   }
   useEffect(() => {
     localStorage.setItem("VL", JSON.stringify(visitedLinks));
@@ -79,7 +70,6 @@ export default function BasicTabs() {
           variant="fullWidth"
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs"
         >
           <Tab label="Social" {...a11yProps(0)} />
           <Tab label="Portfolio " {...a11yProps(1)} />
@@ -87,176 +77,36 @@ export default function BasicTabs() {
       </Box>
 
       <TabPanel value={value} index={0}>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        <CustomizedButtons
+          text="instagram"
           href="https://www.instagram.com/moondusk1996/"
-          target={"_blank"}
-          startIcon={<Instagram />}
-          onClick={handleButton}
-        >
-          Instagram
-        </Button>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        />
+        <CustomizedButtons
+          text="Discord"
           href="https://discord.gg/AGfxJKmbKf"
-          target={"_blank"}
-          startIcon={<Discord />}
-          onClick={handleButton}
-        >
-          Discord
-        </Button>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        />
+        <CustomizedButtons
+          text="Steam"
           href="https://steamcommunity.com/id/TheDuskHue/"
-          target={"_blank"}
-          startIcon={<Steam />}
-          onClick={handleButton}
-        >
-          Steam
-        </Button>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        />
+        <CustomizedButtons
+          text="Email"
           href="mailto:washington.lopesdasilvafilho@gmail.com"
-          target={"_blank"}
-          startIcon={<Gmail />}
-          onClick={handleButton}
-        >
-          Email
-        </Button>
+        />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        <CustomizedButtons
+          text="GitHub"
           href="https://github.com/MoonDusk1996"
-          target={"_blank"}
-          startIcon={<GitHub />}
-          onClick={handleButton}
-        >
-          Github
-        </Button>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        />
+        <CustomizedButtons
+          text="ArtStation"
           href="https://www.artstation.com/duski"
-          target={"_blank"}
-          startIcon={<ArtStation />}
-          onClick={handleButton}
-        >
-          ArtStation
-        </Button>
-        <Button
-          fullWidth
-          sx={{
-            height: "60px",
-            marginTop: "20px",
-            transition: "font-size 0.2s ease",
-
-            ":hover ": {
-              fontSize: "16px",
-              transition: "font-size, background  .1s ease",
-            },
-            ":active": {
-              position: "relative",
-              top: "2px",
-            },
-          }}
-          variant="outlined"
+        />
+        <CustomizedButtons
+          text="Linkedin"
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
-          target={"_blank"}
-          startIcon={<Linkedin />}
-          onClick={handleButton}
-        >
-          Linkedin
-        </Button>
+        />
       </TabPanel>
     </Box>
   );
