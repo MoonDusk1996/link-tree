@@ -26,7 +26,7 @@ export default function CustomizedButtons({
   href,
 }: CustomizedButtonsProps) {
   return (
-    <ColorButton target={"_blank"} fullWidth variant="outlined" href={href}>
+    <ColorButton fullWidth variant="outlined" href={href}>
       {text}
     </ColorButton>
   );
