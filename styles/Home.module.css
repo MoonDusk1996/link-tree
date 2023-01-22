@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 75px;
 }
 .avatar img {
   border-radius: 100;
@@ -31,13 +31,23 @@
   margin: 5px;
 }
 
+@media screen and (max-height: 750px) {
+  .headerContainer {
+    margin-top: 250px;
+  }
+}
+
+@media screen and (max-height: 487px) {
+  .headerContainer {
+    margin-top: 500px;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .App {
     margin: 0 auto;
   }
-  .headerContainer {
-    margin-top: 50px;
-  }
+
   .linksContainer {
     width: 700px;
   }
