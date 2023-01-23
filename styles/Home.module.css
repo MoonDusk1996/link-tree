@@ -4,6 +4,13 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  height: 100%;
+}
+.App > div {
+  margin: 15px;
+}
+.headerContainer > div {
+  margin: 5px;
 }
 
 .headerContainer {
@@ -15,43 +22,21 @@
 .avatar img {
   border-radius: 100;
 }
-.badges {
-  display: flex;
-  flex-direction: row;
-}
-
 .linksContainer {
   width: 95%;
 }
-
-.App > div {
-  margin: 15px;
+.footerContainer{
+  display: flex;
+  
 }
-.headerContainer > div {
-  margin: 5px;
-}
-
-@media screen and (max-height: 750px) {
-  .headerContainer {
-    margin-top: 250px;
-  }
-}
-
-@media screen and (max-height: 487px) {
-  .headerContainer {
-    margin-top: 500px;
-  }
-}
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .App {
     margin: 0 auto;
+    margin-top: 100px;
   }
-
   .linksContainer {
     width: 700px;
   }
-
   .App > div {
     margin: 25px;
   }

@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 
 import BasicTabs from "../parts/Tabs";
 import Profile from "../parts/Profile";
+import Footer from "../parts/foote";
 
 function App() {
   return (
@@ -13,9 +14,12 @@ function App() {
       <div className={styles.options}>
         <ToogleThemeSwitch />
       </div>
-      <div className={styles.linksContainer}>
+      <main className={styles.linksContainer}>
         <BasicTabs />
-      </div>
+      </main>
+      <footer className={styles.footerContainer}>
+        <Footer />
+      </footer>
     </div>
   );
 }
