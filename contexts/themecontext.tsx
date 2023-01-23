@@ -58,9 +58,8 @@ export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     <themeContext.Provider value={{ themeName, toggleTheme }}>
       <ThemeProvider theme={theme}>
         <Box
-          width="100vw"
-          height="100%"
-          minHeight="100vh"
+          minHeight={"100vh"}
+          minWidth={"100vw"}
           bgcolor={theme.palette.background.default}
           color={theme.palette.primary.contrastText}
         >
