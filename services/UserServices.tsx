@@ -35,6 +35,6 @@ export function UserData() {
       });
       return undefined;
     });
-  },[]);
+  }, []);
 }
 
