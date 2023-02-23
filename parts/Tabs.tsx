@@ -85,10 +85,7 @@ export default function BasicTabs() {
           text="Discord"
           href="https://discord.gg/AGfxJKmbKf"
         />
-         // <CustomizedButtons
-         // text="Steam"
-         // href="https://steamcommunity.com/id/TheDuskHue/"
-        // />
+
 
         <CustomizedButtons
           text="Email"
