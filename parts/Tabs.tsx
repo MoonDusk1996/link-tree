@@ -97,10 +97,12 @@ export default function BasicTabs() {
           text="Linkedin"
           href="https://www.linkedin.com/in/washington-lopes-638836249/"
         />
+      
         <CustomizedButtons
           text="GitHub"
           href="https://github.com/MoonDusk1996"
         />
+        
         <CustomizedButtons
           text="ArtStation"
           href="https://www.artstation.com/duski"
