@@ -94,16 +94,16 @@ export default function BasicTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <CustomizedButtons
+          text="Linkedin"
+          href="https://www.linkedin.com/in/washington-lopes-638836249/"
+        />
+        <CustomizedButtons
           text="GitHub"
           href="https://github.com/MoonDusk1996"
         />
         <CustomizedButtons
           text="ArtStation"
           href="https://www.artstation.com/duski"
-        />
-        <CustomizedButtons
-          text="Linkedin"
-          href="https://www.linkedin.com/in/washington-lopes-638836249/"
         />
       </TabPanel>
     </Box>
